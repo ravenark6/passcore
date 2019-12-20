@@ -25,9 +25,9 @@
 
 PassCore is a very simple 1-page web application written in [C#](https://docs.microsoft.com/en-us/dotnet/csharp/), using [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/getting-started?view=aspnetcore-2.0), [Material UI (React Components)](https://material-ui.com/), and [Microsoft Directory Services](https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices) (Default provider). 
 
-It allows users to change their Active Directory/LDAP password on their own, provided the user is not disabled.
+It allows users to change their Active Directory/LDAP password on their own, assuming the user is not disabled.
 
-PassCore does not require any configuration, as it obtains the principal context from the current domain. I wrote this because a number of people have requested several features that the [original version](http://unopasscore.codeplex.com/) did not have. The original version of this tool was downloaded around 8000 times in 2.5 years. My hope is that the new version continues to be just as popular. There really is no free alternative out there (that I know of) so hopefully this saves someone else some time and money.
+PassCore does not require any configuration, as it obtains the principal context from the current domain. Attending the increasing requests of users to include several features that the [original version](http://unopasscore.codeplex.com/) did not have, this application has been improved. The original version of this tool was downloaded around 8000 times in 2.5 years, it is intended that this new version continues to be just as popular. There really is no free alternative out there (that I know of) so hopefully this saves someone else some time and money.
 
 You can check [the wiki section](https://github.com/unosquare/passcore/wiki) for additional content related to development of this project.
 
@@ -41,7 +41,7 @@ PassCore has the following features:
 - Has a password generator
 - Has a server-side password entropy meter
 
-- Responsive design that works on mobiles, tablets, and desktops.
+- Responsive design that works on mobile, tablet, and desktop.
 - Works with Windows/Linux servers.
 
 <img align="center" src="https://user-images.githubusercontent.com/25519413/63782596-39713d80-c8b1-11e9-84f0-eef7a06b447b.png"></img>
@@ -111,7 +111,7 @@ passcore:latest
 
 PassCore was created to use the Microsoft Active Directory Services provided by .NET Framework, but a new Provider using [Novell LDAP Client](https://github.com/dsbenghe/Novell.Directory.Ldap.NETStandard) can be used instead. This provider is the default when PassCore is running at Linux or macOS since Microsoft AD Services are NOT available.
 
-The configuration of the LDAP Provider is slightly different. for example, the AutomaticContext is not available and you need to supply credentials.
+The configuration of the LDAP Provider is slightly different, for example, the AutomaticContext is not available and you need to supply credentials.
 
 *WIP*
 
